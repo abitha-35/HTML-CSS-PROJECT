@@ -1,0 +1,977 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background: #5b068c;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  flex: 1;
+  min-width: 100px;
+}
+
+.location {
+  font-size: 1.2rem;
+  flex: 1;
+  text-align: center;
+  min-width: 100px;
+}
+
+.search {
+  flex: 2;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  max-width: 400px;
+  min-width: 180px;
+}
+
+header ion-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  flex: 0 0 auto;
+  margin-left: 1rem;
+}
+
+/* Banner */
+.banner {
+  background-image: url("https://images.yourstory.com/cs/2/e641e900925711e9926177f451727da9/banner-8-by-400-large-1636084132483.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0.4rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.banner-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+}
+
+.banner button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  background: white;
+  color: #5b068c;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.banner button:hover {
+  background-color: palevioletred;
+  color: white;
+}
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .location {
+    font-size: 0.95rem;
+  }
+
+  .banner {
+    height: 35vh;
+  }
+
+  .banner-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .banner-text p {
+    font-size: 0.95rem;
+  }
+
+  .banner button {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .location {
+    text-align: center;
+    width: 100%;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .banner {
+    height: 30vh;
+  }
+
+  .banner-text {
+    top: 25%;
+    left: 8%;
+  }
+
+  .banner-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .banner-text p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Categories */
+/* Main categories section */
+.categories {
+  padding: 2rem;
+  background: #f9f9f9;
+  text-align: center;
+  margin: 1rem;
+}
+
+/* Section heading */
+.categories h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: purple;
+  font-family:"cursive";
+  text-transform: uppercase;
+  border-bottom: 2px solid #ddd;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Category list layout */
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Individual category box */
+.category {
+  width: 13%;
+  min-width: 140px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.category img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 8px 8px 25px rgba(72, 9, 72, 0.3);
+}
+
+.category p {
+  margin-top: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: purple
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .category {
+    width: 22%;
+  }
+
+  .categories h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+  .category {
+    width: 30%;
+  }
+
+  .categories h2 {
+    font-size: 1.6rem;
+  }
+
+  .category p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .category {
+    width: 45%;
+  }
+
+  .categories h2 {
+    font-size: 1.4rem;
+  }
+
+  .category p {
+    font-size: 0.9rem;
+  }
+}
+
+/* fruits */
+/* Main section container */
+.veg {
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  /* max-width: 1200px; */
+}
+
+/* Section heading */
+.veg h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color:purple;
+  font-family: "cursive";
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Fruits and vegetables container */
+.fruits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+/* Product card styling */
+.image {
+  width: 18%;
+  min-width: 180px;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image styling */
+.image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text styles */
+.image h3,
+.image em,
+.image p {
+  margin-top: 10px;
+  color: #333;
+}
+
+.image h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.image em {
+  color: #777;
+  font-style: normal;
+}
+
+.image p {
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  .image {
+    width: 30%;
+  }
+
+  .veg h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .image {
+    width: 45%;
+  }
+
+  .veg h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .image {
+    width: 90%;
+  }
+
+  .veg {
+    padding: 1rem;
+  }
+
+  .veg h1 {
+    font-size: 1.5rem;
+  }
+
+  .image h3 {
+    font-size: 1rem;
+  }
+
+  .image p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Product card styling */
+.image {
+  width: 18%;
+  min-width: 180px;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Dairy products */
+.dairy-products {
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  /* max-width: 1200px; */
+}
+
+/* Section heading */
+.dairy-products h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2c2c2c;
+  font-weight: 500;
+  font-family:"cursive";
+  color: purple;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.dairy-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+/* Product card styling */
+.dairy {
+  width: 18%;
+  min-width: 180px;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dairy:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image styling */
+.dairy img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text styles */
+.dairy h3,
+.dairy em,
+.dairy p {
+  margin-top: 10px;
+  color: #333;
+}
+
+.dairy h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.dairy em {
+  color: #777;
+  font-style: normal;
+}
+
+.dairy p {
+  font-weight: bold;
+  color: #2e8b57;
+}
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  .dairy {
+    width: 30%;
+  }
+
+  .dairy-products h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .dairy {
+    width: 45%;
+  }
+
+  .dairy-products h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .dairy {
+    width: 90%;
+  }
+
+  .dairy-products {
+    padding: 1rem;
+  }
+
+  .dairy-products h1 {
+    font-size: 1.5rem;
+  }
+
+  .dairy h3 {
+    font-size: 1rem;
+  }
+
+  .dairy p {
+    font-size: 0.95rem;
+  }
+}
+
+/* snacks products */
+.snacks-products,.beverages-products,.meat-products {
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  /* max-width: 1200px; */
+}
+
+/* Section heading */
+.snacks-products h1,.beverages-products h1,.meat-products h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: purple;
+  font-family: "cursive";
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.snacks-list,.beverages-list,.meat-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+/* Product card styling */
+.snacks,.beverages,.meat {
+  width: 18%;
+  min-width: 180px;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.snacks:hover, .beverages:hover, .meat:hover {
+  transform: translatey(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image styling */
+.snacks, .beverages, .meat {
+  width: 18%;
+  min-width: 180px;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.snacks:hover, .beverages:hover, .meat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image styling */
+.snacks img, .beverages img, .meat img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text styles */
+.snacks h3, .beverages h3, .meat h3,
+.snacks em, .beverages em, .meat em,
+.snacks p, .beverages p, .meat p{
+  margin-top: 10px;
+  color: #333;
+}
+
+.snacks h3, .beverages h3, .meat h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.snacks em, .beverages em, .meat em {
+  color: #777;
+  font-style: normal;
+}
+
+.snacks p, .beverages p, .meat p{
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  .snacks, .beverages, .meat {
+    width: 30%;
+  }
+
+  .snacks-products h1,
+  .beverages-products h1, 
+  .meat-products h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .snacks, .beverages, .meat {
+    width: 45%;
+  }
+
+  .snacks-products h1,
+  .beverages-products h1, 
+  .meat-products{
+    font-size: 1.8rem;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .snacks, .beverages, .meat {
+    width: 90%;
+  }
+
+  .snacks-products,
+  .beverages-products,
+  .meat-products {
+    padding: 1rem;
+  }
+
+  .snacks-products h1,
+  .beverages-products h1,
+  .meat-products {
+    font-size: 1.5rem;
+  }
+
+  .snacks h3, .beverages h3, .meat h3 {
+    font-size: 1rem;
+  }
+
+  .snacks p, .beverages p, .meat p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* Products */
+.products {
+  padding: 1.5rem;
+}
+
+/* text-align: center; */
+.products h1{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: purple;
+  font-family: "cursive";
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+
+.product-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 18%;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: center;
+}
+
+.product:hover {
+  transform: scale(1.05) rotateY(1deg);
+  box-shadow: 0 4px 20px rgba(5, 7, 15, 0.25);
+  border: 2px dotted #5b068c33;
+
+}
+
+
+/* Image styling */
+.product img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Text styling */
+.product p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Button styling */
+.product button {
+  margin-top: 0.5rem;
+  background: #5b068c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.product button:hover {
+  background: whitesmoke;
+  color: #5b068c;
+  transform: scale(1.05);
+}
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  .product {
+    width: 30%;
+  }
+
+  .products h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .product {
+    width: 45%;
+  }
+
+  .products h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .product {
+    width: 90%;
+  }
+
+  .products {
+    padding: 1rem;
+  }
+
+  .products h2 {
+    font-size: 1.5rem;
+  }
+
+  .product p {
+    font-size: 1rem;
+  }
+
+  .product button {
+    font-size: 0.95rem;
+    padding: 5px 10px;
+  }
+}
+
+
+/* Footer */
+/* Base footer styling */
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: white;
+  gap: 1.5rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.footer1 {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer1 h1 {
+  color: #5b068c;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.footer1 span {
+  font-size: 1.8rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Ensure icons look clickable */
+.footer1 span ion-icon {
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+.footer1 span ion-icon:hover {
+  transform: scale(1.2);
+  color: #5b068c;
+}
+
+/* General spacing */
+.footer1 h1, 
+.footer1 span,
+.footer1 h2,
+.footer1 h4 {
+  margin: 0.5rem 0;
+  padding: 0.3rem 0;
+}
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .footer1 {
+    flex: 1 1 45%;
+    margin-bottom: 1rem;
+  }
+
+  .footer1 span {
+    justify-content: center;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem;
+  }
+
+  .footer1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer1 h1 {
+    font-size: 1.8rem;
+  }
+
+  .footer1 span {
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+
+  .footer1 h2 {
+    font-size: 1.2rem;
+  }
+
+  .footer1 h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Small screens (like small phones) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer1 h1 {
+    font-size: 1.6rem;
+  }
+
+  .footer1 span {
+    font-size: 1.4rem;
+  }
+
+  .footer1 h4 {
+    font-size: 0.95rem;
+  }
+}
+
